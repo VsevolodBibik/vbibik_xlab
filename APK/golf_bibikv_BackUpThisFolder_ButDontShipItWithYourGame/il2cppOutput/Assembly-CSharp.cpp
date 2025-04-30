@@ -4316,19 +4316,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayState_OnDisable_m2E46C8E8E5C377A
 	{
 		// base.OnDisable();
 		GameState_OnDisable_m15BA97AF2E80297623C498E9D2053FF16A1AE2BC(__this, NULL);
-		// GameEvents.onCollisionStones -= OnGameOver;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)GamePlayState_OnGameOver_m8B00976942704B49E02A2C441A1DD564ADD61F9B_RuntimeMethod_var), NULL);
-		GameEvents_remove_onCollisionStones_m9789F93C448AFA5ADBEA863A8A9A0AFBA1B169EA(L_0, NULL);
 		// levelController.enabled = false;
-		LevelController_t3E7A09BB4E4697AE950BC83BDE04A38E53E41C69* L_1 = __this->___levelController_5;
+		LevelController_t3E7A09BB4E4697AE950BC83BDE04A38E53E41C69* L_0 = __this->___levelController_5;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)0, NULL);
+		// playerController.enabled = false;
+		PlayerController_tC3050C205C2C361D6A9BBF9EF2913352D3CF5DA5* L_1 = __this->___playerController_6;
 		NullCheck(L_1);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_1, (bool)0, NULL);
-		// playerController.enabled = false;
-		PlayerController_tC3050C205C2C361D6A9BBF9EF2913352D3CF5DA5* L_2 = __this->___playerController_6;
+		// GameEvents.onCollisionStones -= OnGameOver;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		NullCheck(L_2);
-		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_2, (bool)0, NULL);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_2, __this, (intptr_t)((void*)GamePlayState_OnGameOver_m8B00976942704B49E02A2C441A1DD564ADD61F9B_RuntimeMethod_var), NULL);
+		GameEvents_remove_onCollisionStones_m9789F93C448AFA5ADBEA863A8A9A0AFBA1B169EA(L_2, NULL);
 		// }
 		return;
 	}
