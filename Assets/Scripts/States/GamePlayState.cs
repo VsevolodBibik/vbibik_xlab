@@ -39,10 +39,12 @@ namespace Golf
         {
             base.OnDisable();
 
-            GameEvents.onCollisionStones -= OnGameOver;
-
             levelController.enabled = false;
             playerController.enabled = false;
+
+            GameEvents.onCollisionStones -= OnGameOver;
+
+            
         }
     }
 }
